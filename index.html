@@ -10,43 +10,53 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jcarousel/0.3.4/jquery.jcarousel.min.js"></script>
     <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Contenedor principal */
         .jcarousel-wrapper {
             position: relative;
             display: block;
             overflow: hidden;
-            width: 800px; /* ajusta el ancho según tus necesidades */
-            margin: 0 auto; /* centra el carrusel horizontalmente */
+            width: 100%; /* Ancho máximo */
+            margin: 0 auto; /* Centra el carrusel horizontalmente */
         }
 
+        /* Carrusel */
         .jcarousel {
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 300px; /* ajusta la altura según tus necesidades */
+            height: auto; /* Ajusta la altura automáticamente */
         }
 
         .jcarousel ul {
             list-style: none;
             margin: 0;
             padding: 0;
-            width: 8000px; /* ajusta el ancho según la cantidad de imágenes */
+            width: 10000px; /* ajusta el ancho según la cantidad de imágenes */
             transition: transform 0.5s ease; /* agrega una transición suave al desplazamiento */
         }
 
         .jcarousel ul li {
             float: left;
-            width: 800px; /* ajusta el ancho según tus necesidades */
-            height: 300px; /* ajusta la altura según tus necesidades */
+            width: 100%; /* Ajusta el ancho al 100% */
+            height: auto; /* Ajusta la altura según tus necesidades */
             transition: opacity 0.3s ease; /* agrega una transición suave */
         }
 
         .jcarousel img {
             display: block;
             width: 100%;
-            height: 100%;
+            height: auto; /* Ajusta la altura automáticamente */
             object-fit: cover; /* asegura que la imagen se ajuste completamente al contenedor */
         }
 
+        /* Controles y paginación */
         .jcarousel-control-prev,
         .jcarousel-control-next {
             position: absolute;
@@ -93,6 +103,17 @@
         .jcarousel-pagination a:hover {
             background-color: black;
         }
+
+        /* Media queries */
+        @media screen and (min-width: 768px) {
+            .jcarousel-wrapper {
+                width: 800px; /* Ancho para pantallas grandes */
+            }
+
+            .jcarousel ul li {
+                width: 800px; /* Ancho para pantallas grandes */
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,18 +157,17 @@
         </div>
     </section>
 
-</div>
-<div class="container_16">
-    
+    <div class="container_16">
         <h4>Inventario</h4>
-        
         <div class="grid_4">
-        <div class="pro_wrapper pro_pad_port">
-           <img src="images/IMG-556.jpg" alt="">
-            <h5><p>2015 POLARIS RZR 1000 $298,000 </p></h5>
-            <a href="2015_polaris_rzr_1000.html" class="button">Ver Fotos e Informacion</a>
+            <div class="pro_wrapper pro_pad_port">
+                <img src="images/IMG-556.jpg" alt="">
+                <h5><p>2015 POLARIS RZR 1000 $298,000 </p></h5>
+                <a href="2015_polaris_rzr_1000.html" class="button">Ver Fotos e Informacion</a>
+            </div>
         </div>
-        </div>
+    </div>
+    
     <!--==============================footer=================================-->
     <footer>
         <div class="main">Autorapido.com.mx &copy; 2018 &bull; <a href="https://www.topcarseminuevos.com/index-5.html">Privacy Policy</a></div>
